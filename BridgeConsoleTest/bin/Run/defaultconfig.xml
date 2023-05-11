@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+	<NetworkStartupDelay>0</NetworkStartupDelay>
+	<WebBridge>
+		<AutoDisplayIndex>0</AutoDisplayIndex>
+		<Heigth>600</Heigth>
+		<InvertXAxis>false</InvertXAxis>
+		<InvertYAxis>false</InvertYAxis>
+		<IsAutoFit>false</IsAutoFit>
+		<IsEnabled>false</IsEnabled>
+		<Left>0</Left>
+		<SwapAxis>false</SwapAxis>
+		<Top>0</Top>
+		<Width>800</Width>
+	</WebBridge>
+	<WebBridge2>
+		<AutoDisplayIndex>0</AutoDisplayIndex>
+		<Heigth>600</Heigth>
+		<InvertXAxis>false</InvertXAxis>
+		<InvertYAxis>false</InvertYAxis>
+		<IsAutoFit>false</IsAutoFit>
+		<IsEnabled>false</IsEnabled>
+		<Left>800</Left>
+		<SwapAxis>false</SwapAxis>
+		<Top>0</Top>
+		<Width>800</Width>
+	</WebBridge2>
+	<wwwPort>0</wwwPort>
+</Config>

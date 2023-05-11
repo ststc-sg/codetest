@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Heading</title>
+    <link rel="stylesheet" href="../components/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="panel.css">
+    <script src="utils.js"></script>
+    <script src="enginedraw.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", e => SubscribeToUpdate());
+    </script>
+    <style>
+        .vecticaltext { font-size: 16pt; }
+    </style>
+
+</head>
+<body class="claro">
+<div class="mainpanel">
+    <div class="mainpanelcaption">
+        ENGINE CONTROL
+    </div>
+    <div style="display: table; height: 90%; width: 95%;">
+        <div class="clientpanel" style="display: table-cell; height: 100%; width: 160px;">
+            <table style="width: 100%">
+                <tr>
+                    <td width="10%">
+                        <a class="vecticaltext greentext">A<br>H<br>E<br>A<br>D</a>
+                        <BR><BR><BR><BR><BR><BR><BR>
+                        <a class="vecticaltext redtext">A<br>S<br>T<br>E<br>R<br>N</a>
+                        <BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                    </td>
+                    <td width="90%">
+                        <button class="buttonwithlamp greedbackground greenlamp" id="pfull">
+                            FULL
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="phalf">
+                            HALF
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="pslow">
+                            SLOW
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="pdslow">
+                            D.SLOW
+                        </button>
+                        <button class="buttonwithlamp whitebackground whitelamp" id="pstop">
+                            STOP
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="prdslow">
+                            D.SLOW
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="prslow">
+                            SLOW
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="prhalf">
+                            HALF
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="prfull">
+                            FULL
+                        </button>
+
+                        <div class="signallamp greedbackground greenlamp" id="psea" style="height: 30px; width: 95%;">
+                            AT SEA
+                        </div>
+                        <div class="signallamp whitebackground whitelamp" id="pstandy" style="height: 30px; width: 95%;">
+                            STANDBY
+                        </div>
+                        <div class="signallamp greedbackground greenlamp" id="pwe" style="height: 30px; width: 95%;">
+                            F.W.E
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="clientpanel" style="display: table-cell; height: 100%; width: 480px;">
+            <canvas id="engine" width="350" height="450" style="margin-top: auto"></canvas>
+        </div>
+        <div class="clientpanel" style="display: table-cell; height: 100%; width: 160px;">
+            <table style="width: 100%">
+                <tr>
+                    <td width="90%">
+                        <button class="buttonwithlamp greedbackground greenlamp" id="sfull">
+                            FULL
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="shalf">
+                            HALF
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="sslow">
+                            SLOW
+                        </button>
+                        <button class="buttonwithlamp greedbackground greenlamp" id="sdslow">
+                            D.SLOW
+                        </button>
+                        <button class="buttonwithlamp whitebackground whitelamp" id="sstop">
+                            STOP
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="srdslow">
+                            D.SLOW
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="srslow">
+                            SLOW
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="srhalf">
+                            HALF
+                        </button>
+                        <button class="buttonwithlamp redbackground redlamp" id="srfull">
+                            FULL
+                        </button>
+
+                        <div class="signallamp greedbackground greenlamp" id="ssea" style="height: 30px; width: 95%;">
+                            AT SEA
+                        </div>
+                        <div class="signallamp whitebackground whitelamp" id="sstandy" style="height: 30px; width: 95%;">
+                            STANDBY
+                        </div>
+                        <div class="signallamp greedbackground greenlamp" id="swe" style="height: 30px; width: 95%;">
+                            F.W.E
+                        </div>
+                    </td>
+                    <td width="10%">
+                        <a class="vecticaltext greentext">A<br>H<br>E<br>A<br>D</a>
+                        <BR><BR><BR><BR><BR><BR><BR>
+                        <a class="vecticaltext redtext">A<br>S<br>T<br>E<br>R<br>N</a>
+                        <BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    const enginedrawer = EngineDrawer({ renderTo: "engine" });
+    enginedrawer.draw();
+
+    RegisterActiveElement("lengine",
+        (state) => {
+            enginedrawer.leftpos = state / 10;
+        });
+    RegisterActiveElement("rengine",
+        (state) => {
+            enginedrawer.rightpos = state / 10;
+            enginedrawer.draw();
+        });
+    enginedrawer.onLeftChanged = (pos) => PushJsonCommand("lengine", pos * 10);
+    enginedrawer.onRightChanged = (pos) => PushJsonCommand("rengine", pos * 10);
+    RegisterActiveElement("engine", (state) => UseJsonForUpdate(state)); //redirect "engine" sub-object to parse
+</script>
+</body>
+</html>

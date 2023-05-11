@@ -1,0 +1,255 @@
+:root {
+    --backgroundColourMain: #e6e9f2;
+    --backgroundColour: #e6e9f2;
+    --buttonColour: #105689;
+    --buttonCheckedColour: #606060;
+    --indicatorHeader: #062db9;
+    --headerColor: #ffffff;
+    --indicatorColor:#0000ff
+}
+
+html, body {
+    background: var(--backgroundColourMain);
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    width: 100%;
+}
+
+.glStyleRudder {
+    height: 300px;
+    margin-left: -5%;
+    margin-top: 10%;
+    width: 190px;
+}
+
+#borderContainer {
+    height: 100%;
+    var(;
+    width: 100%;
+    --backgroundColourMain)
+    ;
+}
+
+.claro .headerInfo {
+    background: black;
+    color: white;
+    text-align: right;
+}
+
+.claro .leftpart {
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+}
+
+.buttonbox {
+    overflow: hidden;
+    text-align: center;
+}
+
+.claro .centerpart {
+    overflow: hidden;
+    text-align: center;
+    width: 40%;
+}
+
+.claro .parameterTable {
+    bottom: 0;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+
+.claro .centerpartPatameter {
+    background-color: #eef1f6;
+    border: 3px solid #d0d3d8;
+    border-radius: 10px;
+    margin-bottom: 3%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.claro .rightpartPatameter {
+    margin-right: 13px;
+    margin-top: 0px;
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+}
+
+.claro .rightpart {
+    margin-right: 13px;
+    overflow: hidden;
+    text-align: center;
+    width: 30%;
+}
+
+.claro .staticbox {
+    background: var(--backgroundColour);
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 70%;
+    overflow: hidden;
+}
+
+.sidebutton {
+    font-size: 4vw;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.bigbutton { width: 99%; }
+
+.bigbutton .dijitButtonNode {
+    font-size: 2vw;
+    width: 99%;
+}
+
+.largebutton {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: var(--buttonColour);
+    color: #FFFFFF;
+    display: inline-block;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#3093c7, endColorstr=#1c5a85);
+    font-family: arial, helvetica, sans-serif;
+    font-size: 7vw;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: 95%;
+}
+
+.largebuttonchecked {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: var(--buttonCheckedColour);
+    color: #FFFFFF;
+    display: inline-block;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#001439, endColorstr=#0e0e0e);
+    font-family: arial, helvetica, sans-serif;
+    font-size: 7vw;
+    font-weight: lighter;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: 95%;
+}
+
+.largebutton:hover {
+    background-color: #26759e;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#26759e), to(#133d5b));
+    background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+    background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+    background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+    background-image: -o-linear-gradient(top, #26759e, #133d5b);
+    background-image: linear-gradient(to bottom, #26759e, #133d5b);
+    border: 1px solid #1c5675;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#26759e, endColorstr=#133d5b);
+}
+
+.indicatorheader {
+    color: var(--indicatorHeader);
+    font-size: 2vw;
+    font-weight: lighter;
+}
+
+.bigindicatorheader {
+    color: black;
+    font-size: 3vw;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.smallindicatorbor {
+    background: #d7d7d7;
+    border: 1px solid #1c5675;
+    border-radius: 5px;
+    font-size: 3vw;
+}
+
+.indicatorinside {
+    border: 0px;
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+.bigindicatorbor {
+    background: #d7d7d5;
+    border: 1px solid #1c5675;
+    border-radius: 3px;
+    color: var(--indicatorHeader);
+    float: left;
+    font-size: 3vw;
+    width: 100%;
+}
+
+.bigindicatorbor .before {
+		
+    font-size: 2vw;
+    width: 20%;
+}
+
+.bigindicatorbor .indicator {
+    color: var(--indicatorHeader);
+    font-size: 6vw;
+    margin: 0;
+    text-align: center;
+    width: 50%;
+}
+
+.bigindicatorbor .after {
+    font-size: 2vw;
+    text-align: right;
+    width: 30%;
+}
+
+
+.menubutton, .menubuttonchecked {
+    align-items: center;
+    border-radius: 10px;
+    color: var(--headerColor);
+    display: flex;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#3093c7, endColorstr=#1c5a85);
+    font-family: arial, helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: 95%;
+}
+.menubutton {
+    background-color: var(--buttonCheckedColour);
+}
+
+.menubuttonchecked {
+    background-color: var(--buttonColour);
+}
+
+
+.menubutton:hover {
+    background-color: #26759e;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#26759e), to(#133d5b));
+    background-image: -webkit-linear-gradient(top, #26759e, #133d5b);
+    background-image: -moz-linear-gradient(top, #26759e, #133d5b);
+    background-image: -ms-linear-gradient(top, #26759e, #133d5b);
+    background-image: -o-linear-gradient(top, #26759e, #133d5b);
+    background-image: linear-gradient(to bottom, #26759e, #133d5b);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#26759e, endColorstr=#133d5b);
+}

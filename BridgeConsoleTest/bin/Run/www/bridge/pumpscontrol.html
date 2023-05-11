@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Heading</title>
+    <link rel="stylesheet" href="../components/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="panel.css">
+    <script src="utils.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",
+            function(e) {
+                SubscribeToUpdate();
+            });
+        RegisterActiveElement("pumps", (state) => UseJsonForUpdate(state)); //redirect "port" sub-object to parse
+
+    </script>
+
+</head>
+<body class="claro">
+<div class="mainpanel">
+    <div class="mainpanelcaption">
+        PUMP CONTROL
+    </div>
+    <div class="clientpanel" style="height: 90%; width: 90%;">
+        <table style="height: 100%; margin: auto; margin-top: 0.5%; width: 100%;">
+            <tr>
+                <td colspan="6">&nbsp;
+            </tr>
+            <tr>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="p1On">
+                        START<br>PUMP 1<br>PORT
+                    </button>
+                </td>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="p2On">
+                        START<br>PUMP 2<br>PORT
+                    </button>
+                </td>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="psOn">
+                        START<br>SPARE&nbsp;PUMP<br>PORT
+                    </button>
+                </td>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="s1On">
+                        START<br>PUMP 1<br>STBD
+                    </button>
+                </td>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="s2On">
+                        START<br>PUMP 2<br>STBD
+                    </button>
+                </td>
+                <td width="16%">
+                    <button class="lampbutton greedbackground" id="ssOn">
+                        START<br>SPARE&nbsp;PUMP<br>STBD
+                    </button>
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="6">&nbsp;
+            </tr>
+            <tr>
+                <td>
+                    <button class="lampbutton redbackground" id="p1Off">
+                        STOP<br>PUMP 1<br>PORT
+                    </button>
+                </td>
+                <td>
+                    <button class="lampbutton redbackground" id="p2Off">
+                        STOP<br>PUMP 2<br>PORT
+                    </button>
+                </td>
+                <td>
+                    <button class="lampbutton redbackground" id="psOff">
+                        STOP<br>SPARE PUMP<br>PORT
+                    </button>
+                </td>
+                <td>
+                    <button class="lampbutton redbackground" id="s1Off">
+                        STOP<br>PUMP 1<br>STBD
+                    </button>
+                </td>
+                <td>
+                    <button class="lampbutton redbackground" id="s2Off">
+                        STOP<br>PUMP 2<br>STBD
+                    </button>
+                </td>
+                <td>
+                    <button class="lampbutton redbackground" id="ssOff">
+                        STOP<br>SPARE PUMP<br>STBD
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">&nbsp;
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="lampbutton whitebackground" id="PumpControlPort" style="margin-left: auto; margin-right: auto; width: 50%;">
+                        FU PORT
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button class="lampbutton whitebackground" id="PumpControlSync" style="margin-left: auto; margin-right: auto; width: 50%;">
+                        FU SYNC
+                    </button>
+                </td>
+                <td colspan="2">
+                    <button class="lampbutton whitebackground" id="PumpControlStbd" style="margin-left: auto; margin-right: auto; width: 50%;">
+                        FU STBD
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div class="redbackground redlamp signallamp" id="p1Fail" style="height: 60%; margin: auto; width: 95%;">
+                        PUMP 1<br>PORT<br>FAILURE
+                    </div>
+                </td>
+                <td>
+                    <div class="redbackground signallamp redlamp " id="p2Fail" style="height: 60%; margin: auto; width: 95%;">
+                        PUMP 2<br>PORT<br>FAILURE
+                    </div>
+                </td>
+                <td>
+                    <div class="redbackground redlamp signallamp " id="psFail" style="height: 60%; margin: auto; width: 95%;">
+                        SPARE PUMP<br>PORT<br>FAILURE
+                    </div>
+                </td>
+                <td>
+                    <div class="redbackground redlamp signallamp " id="s1Fail" style="height: 60%; margin: auto; width: 95%;">
+                        PUMP 1<br>STBD<br>FAILURE
+                    </div>
+                </td>
+                <td>
+                    <div class="redbackground redlamp signallamp " id="s2Fail" style="height: 60%; margin: auto; width: 95%;">
+                        PUMP 2<br>STBD<br>FAILURE
+                    </div>
+                </td>
+                <td>
+                    <div class="redbackground redlamp signallamp " id="ssFail" style="height: 60%; margin: auto; width: 95%;">
+                        SPARE PUMP<br>STBD<br>FAILURE
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

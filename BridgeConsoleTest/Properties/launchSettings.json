@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BridgeConsole": {
+      "commandName": "Project",
+      "workingDirectory": "bin\\Run"
+    }
+  }
+}

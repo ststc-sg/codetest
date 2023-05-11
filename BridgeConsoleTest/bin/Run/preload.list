@@ -1,0 +1,12 @@
+/bridge/main.html
+/bridge/main.css
+/bridge/main.js
+/bridge/indicatorport.html
+/bridge/indicatorstbd.html
+/bridge/engine.html
+/bridge/panel.css
+/bridge/utils.js
+/components/gauges/gauge.min.js
+/bridge/enginedraw.js
+/bridge/images/stbd.png
+/bridge/images/port.png

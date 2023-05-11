@@ -1,0 +1,223 @@
+.mainpanel {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    background-color: var(--indicatorHeader);
+    padding-top: 0.5%;
+    padding: 2%;
+}
+.mainpanelcaption {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    color: var(--headerColor);
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 40%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 2vw;
+    font-weight: lighter;
+}
+.clientpanel {
+    background-color: var(--backgroundColour);
+    border-radius: 10px;
+    display: inline-table;
+    margin: 2px 2px 2px 2px;
+    align-items: center;
+    border: 1px solid var(--buttonCheckedColour);
+    border-radious: 5px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 2vw;
+    font-weight: lighter;
+}
+.redtext {
+    color: #ff0000;
+}
+.greentext {
+    color: #00ff00;
+}
+.redbackground {
+    --buttonoffbackground: #550000;
+    --buttononbackground: #a30000ff;
+    background: var(--buttonoffbackground);
+}
+.greedbackground {
+    --buttonoffbackground: #001000;
+    --buttononbackground: #008500ff;
+    background: var(--buttonoffbackground);
+}
+.whitebackground {
+    --buttonoffbackground: #333333;
+    --buttononbackground: #bbbbbb;
+    background: var(--buttonoffbackground);
+}
+.yellowbackground {
+    --buttonoffbackground: #333300;
+    --buttononbackground: yellow;
+    background: var(--buttonoffbackground);
+}
+
+.lampbutton {
+    text-transform: uppercase;
+    box-shadow: 0 0 1px 1px rgb(10,10,10);
+    cursor: pointer;
+    align-items: center;
+    border-radius: 10px;
+    color: var(--headerColor);
+    display: flex;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 1.6vw;
+    font-weight: lighter;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    width: 95%;
+    height: 100%;
+}
+.lampbuttonon {
+    background: var(--buttononbackground);
+}
+
+.redlamp {
+    --lampon: url('Images/RedDiode16.png');
+    --lampoff: url('Images/RedDiode16Dark.png');
+    --lamoncolor: #ff0000;
+    --lampoffcolor: #220000;
+}
+
+.greenlamp {
+    --lampon: url('Images/GreenDiode16.png');
+    --lampoff: url('Images/GreenDiode16Dark.png');
+    --lamoncolor:#00ff00;
+    --lampoffcolor:#003300;
+}
+.yellowlamp {
+    --lampon: url('Images/YellowDiode16.png');
+    --lampoff: url('Images/YellowDiode16Dark.png');
+    --lamoncolor: #ffff00;
+    --lampoffcolor: #555500;
+}
+.whitelamp {
+    --lamoncolor: white;
+    --lampoffcolor: #333333;
+}
+
+
+.indicator {
+    background: var(--buttonCheckedColour);
+    align-items: center;
+    border-radius: 10px;
+    color: var(--indicatorColor);
+    display: flex;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 3vw;
+    font-weight: lighter;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 10px 10px 10px;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+}
+.imageButton {
+    cursor: pointer;
+    filter: brightness(0.6);
+}
+.imageButton:hover {
+    filter: brightness(0.8);
+}
+.imageButtonOn, .imageButtonOn:hover {
+    filter: brightness(1.5);
+}
+.signallamp {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.buttonwithlamp {
+    font-family: arial, helvetica, sans-serif;
+    font: normal 16px arial;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px 1px rgb(10,10,10);
+    cursor: pointer;
+}
+.buttonwithlamp, .signallamp {
+    box-sizing: border-box;
+    height: 100%;
+    color: #818181;
+    background: var(--buttonoffbackground);
+    border-radius: 7px;
+    float: left;
+    position: relative;
+    padding-left: 4%;
+    padding-top: 5%;
+    vertical-align: bottom;
+    transition: color .3s ease;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.buttonwithlamp:hover {
+    color: #9E9E9E;
+}
+
+.buttonwithlamp:active {
+    box-shadow: 0 0 1px 1px rgb(10,10,10), inset 0 2px 2px 0px black;
+}
+
+
+.buttonwithlamp:before, .signallamp:before {
+    position: absolute;
+    content: '';
+    right: 5px;
+    top: 10px;
+    width: 12px;
+    height: 12px;
+    background: var(--lampoffcolor);
+    background-image: radial-gradient(circle,black,var(--lampoffcolor) );
+    border-radius: 50%;
+    box-shadow: 0 0 4px #1C1C17;
+    transition: all .3s ease;
+}
+
+.button:active:before {
+    box-shadow: 0 0 4px #1C1C17, inset 0 2px 2px 0px #CC0000;
+}
+
+.button:nth-child(1), .signallamp:nth-child(1) {
+    width: 40%;
+    margin-right: 2%;
+}
+
+.button:nth-child(2), .signallamp:nth-child(2) {
+    width: 58%;
+}
+.buttonwithlampon, .signallampon {
+}
+
+.buttonwithlampon:before, .signallampon:before {
+    background: var(--lamoncolor);
+    background-image: radial-gradient(circle,var(--lamoncolor),var(--lampoffcolor) );
+}
+
